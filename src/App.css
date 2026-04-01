@@ -1,0 +1,7 @@
+.shell {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background: var(--page-bg);
+  position: relative;
+}
