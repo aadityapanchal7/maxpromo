@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   min-height: 44px;
-  margin-bottom: 6px;
+  margin-bottom: 14px;
 }
 
 .back {
@@ -46,17 +46,6 @@
   letter-spacing: -0.02em;
   color: #000;
   line-height: 1.2;
-}
-
-.disclaimer {
-  margin: 0 auto 18px;
-  padding: 0 36px;
-  max-width: 360px;
-  font-size: 10px;
-  line-height: 1.55;
-  font-weight: 400;
-  color: var(--disclaimer);
-  text-align: center;
 }
 
 .sectionLabel {

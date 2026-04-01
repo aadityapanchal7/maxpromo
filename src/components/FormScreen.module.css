@@ -102,6 +102,46 @@
   border-color: #b0b0b6;
 }
 
+.colorPresets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -4px 0 16px;
+}
+
+.colorPreset {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--pill-border);
+  border-radius: 999px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+}
+
+.colorPreset:hover {
+  border-color: #b0b0b6;
+  background: #fafafa;
+}
+
+.colorPresetActive {
+  border-color: #000;
+  background: #f3f3f4;
+}
+
+.colorPresetSwatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+
 .uploadZone {
   position: relative;
   display: block;

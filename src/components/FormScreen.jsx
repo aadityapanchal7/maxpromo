@@ -3,6 +3,13 @@ import styles from './FormScreen.module.css'
 
 const MODULE_OPTIONS = ['skinmax', 'bonemax', 'fitmax', 'hairmax']
 
+/** Slightly darkened primaries for on-screen rating */
+const RATING_COLOR_PRESETS = [
+  { label: 'Red', hex: '#c62828' },
+  { label: 'Yellow', hex: '#b8960c' },
+  { label: 'Black', hex: '#1c1c1c' },
+]
+
 const defaultModules = () => new Set(MODULE_OPTIONS)
 
 export default function FormScreen({ onSubmit }) {
@@ -13,8 +20,8 @@ export default function FormScreen({ onSubmit }) {
   const [lastFile, setLastFile] = useState(null)
 
   const [rating, setRating] = useState('4.8')
-  const [ratingColor, setRatingColor] = useState('#e53935')
-  const [ratingHexDraft, setRatingHexDraft] = useState('#e53935')
+  const [ratingColor, setRatingColor] = useState(RATING_COLOR_PRESETS[0].hex)
+  const [ratingHexDraft, setRatingHexDraft] = useState(RATING_COLOR_PRESETS[0].hex)
   const [potential, setPotential] = useState('8.5')
   const [tier, setTier] = useState('MTN')
   const [appeal, setAppeal] = useState('6.0/10')
@@ -187,10 +194,25 @@ export default function FormScreen({ onSubmit }) {
               onKeyDown={(e) => e.key === 'Enter' && e.target.blur()}
               spellCheck={false}
               maxLength={7}
-              placeholder="#e53935"
+              placeholder="#c62828"
               aria-label="Rating color hex"
             />
           </div>
+        </div>
+
+        <div className={styles.colorPresets} role="group" aria-label="Quick rating colors">
+          {RATING_COLOR_PRESETS.map(({ label, hex }) => (
+            <button
+              key={hex}
+              type="button"
+              className={`${styles.colorPreset} ${ratingColor.toLowerCase() === hex ? styles.colorPresetActive : ''}`}
+              onClick={() => applyRatingColor(hex)}
+              aria-pressed={ratingColor.toLowerCase() === hex}
+            >
+              <span className={styles.colorPresetSwatch} style={{ backgroundColor: hex }} />
+              {label}
+            </button>
+          ))}
         </div>
 
         <div className={styles.row2}>

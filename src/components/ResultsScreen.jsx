@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
 import styles from './ResultsScreen.module.css'
 
-const DISCLAIMER =
-  'Not medical advice. For general wellness insights only—not for diagnosis or treatment. See a qualified professional for medical decisions.'
-
 function BackIcon() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
@@ -36,7 +33,7 @@ export default function ResultsScreen({ data, onBack }) {
   const ratingColor =
     typeof data?.ratingColor === 'string' && /^#[0-9A-Fa-f]{6}$/.test(data.ratingColor)
       ? data.ratingColor
-      : '#e53935'
+      : '#c62828'
 
   return (
     <div className={styles.screen}>
@@ -46,8 +43,6 @@ export default function ResultsScreen({ data, onBack }) {
         </button>
         <h1 className={styles.title}>Your results</h1>
       </header>
-
-      <p className={styles.disclaimer}>{DISCLAIMER}</p>
 
       <p className={styles.sectionLabel}>AI facial analysis</p>
 
