@@ -6,7 +6,7 @@ const MODULE_OPTIONS = ['skinmax', 'bonemax', 'fitmax', 'hairmax']
 /** Slightly darkened primaries for on-screen rating */
 const RATING_COLOR_PRESETS = [
   { label: 'Red', hex: '#c62828' },
-  { label: 'Yellow', hex: '#b8960c' },
+  { label: 'Yellow', hex: '#c4a71a' },
   { label: 'Black', hex: '#1c1c1c' },
 ]
 
