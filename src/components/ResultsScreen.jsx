@@ -1,31 +1,23 @@
-import { useEffect, useId, useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './ResultsScreen.module.css'
 
-/** App-Store-style mark (original artwork; not Apple’s asset). */
+/** Compact app-style “A” mark (original; not Apple’s asset). */
 function AppStoreLikeIcon() {
-  const gid = useId().replace(/:/g, '')
   return (
     <svg className={styles.maxAppIcon} viewBox="0 0 48 48" aria-hidden>
-      <defs>
-        <linearGradient id={gid} x1="10" y1="6" x2="38" y2="44" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#5ab0ff" />
-          <stop offset="1" stopColor="#0a6eff" />
-        </linearGradient>
-      </defs>
-      <rect width="48" height="48" rx="11" fill={`url(#${gid})`} />
       <path
         d="M15 33.5L24 13l9 20.5"
         fill="none"
-        stroke="#fff"
-        strokeWidth="3.4"
+        stroke="currentColor"
+        strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M18.5 26h11"
         fill="none"
-        stroke="#fff"
-        strokeWidth="3.4"
+        stroke="currentColor"
+        strokeWidth="4"
         strokeLinecap="round"
       />
     </svg>
