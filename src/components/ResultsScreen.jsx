@@ -1,29 +1,6 @@
 import { useEffect, useState } from 'react'
 import styles from './ResultsScreen.module.css'
 
-/** Compact app-style “A” mark (original; not Apple’s asset). */
-function AppStoreLikeIcon() {
-  return (
-    <svg className={styles.maxAppIcon} viewBox="0 0 48 48" aria-hidden>
-      <path
-        d="M15 33.5L24 13l9 20.5"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M18.5 26h11"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-    </svg>
-  )
-}
-
 function BackIcon() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
@@ -93,7 +70,6 @@ export default function ResultsScreen({ data, onBack }) {
       </div>
 
       <div className={styles.maxAppBanner}>
-        <AppStoreLikeIcon />
         <span className={styles.maxAppText}>Max App</span>
       </div>
 
