@@ -131,6 +131,35 @@
   color: var(--label-gray);
 }
 
+.maxAppBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto 22px;
+  padding: 12px 18px;
+  max-width: 280px;
+  background: #ffffff;
+  border: 1px solid var(--pill-border);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.maxAppIcon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.maxAppText {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #000;
+  line-height: 1;
+}
+
 .metrics {
   display: grid;
   grid-template-columns: 1fr 1fr;
